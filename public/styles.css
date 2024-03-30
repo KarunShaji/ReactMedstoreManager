@@ -1,0 +1,73 @@
+body {
+    position: relative;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('medicine-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.7; 
+    z-index: -1; 
+}
+
+/* Modal container */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 9999; /* Ensure modal appears on top of other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+  
+  /* Show modal when 'show' prop is true */
+  .modal.show {
+    display: block;
+  }
+  
+  /* Modal dialog */
+  .modal-dialog {
+    position: relative;
+    margin: 10% auto; /* Center modal vertically and horizontally */
+    width: 80%;
+    max-width: 500px; /* Adjust maximum width as needed */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    position: relative;
+    background-color: #fff; /* White background */
+    border: 1px solid #888;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  /* Modal header */
+  .modal-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e9ecef; /* Light border at the bottom */
+  }
+  
+  /* Modal body */
+  .modal-body {
+    padding: 10px 15px;
+  }
+  
+  /* Modal footer */
+  .modal-footer {
+    padding: 10px 15px;
+    border-top: 1px solid #e9ecef; /* Light border at the top */
+    text-align: right;
+  }
+  

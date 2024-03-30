@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+      
+      <div className="text-center" style={{ marginTop:"150px" }}>
+        <h3>Welcome to Medstore Manager</h3>
+        <h6>Medicine Management made easy</h6>
+      </div><br /><br />
+      <div className='text-center'>
+      <Link to={"/register"} className="btn btn-dark">Register</Link>
+      <p style={{ marginTop:"200px" }}>Already have an account?</p>
+      <Link to={"/login"}>Login</Link>
+      </div>
     </div>
   );
 }
