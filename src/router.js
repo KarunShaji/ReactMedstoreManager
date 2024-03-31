@@ -8,14 +8,13 @@ import ViewPost from "./components/medicine/ViewMedicine";
 import EditMedine from "./components/medicine/EditMedicine";
 
 const router = createBrowserRouter([
-    { path: '', element: <App/> },
-    { path: '/register', element: <Register/> },
-    { path: '/login', element: <Login/> },
-    { path: '/dashboard', element: <ListMedicines/> },
-    { path : '/create' , element : <CreatePost/> },
-    { path : '/view/:postId' , element : <ViewPost/> },
-    { path : '/edit/:postId' , element : <EditMedine/> },
-    
+  { path: "", element: <App /> },
+  { path: "/register", element: <Register /> },
+  { path: "/login", element: <Login /> },
+  { path: "/dashboard", element: <ListMedicines /> },
+  { path: "/create", element: <CreatePost /> },
+  { path: "/view/:postId", element: <ViewPost /> },
+  { path: "/edit/:postId", element: <EditMedine /> },
 ]);
 
 export default router;

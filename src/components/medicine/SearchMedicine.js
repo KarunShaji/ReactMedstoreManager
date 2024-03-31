@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux"; 
+import { useSelector } from "react-redux";
 import axios from "axios";
 import checkAuth from "../auth/checkAuth";
 
@@ -7,18 +7,18 @@ function SearchMedicine({ setFilteredMedicine }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [noResults, setNoResults] = useState(false);
   const [emptySearch, setEmptySearch] = useState(false);
-  const user = useSelector(store => store.auth.user); 
+  const user = useSelector((store) => store.auth.user);
 
   const handleSearchInputChange = (event) => {
     const value = event.target.value;
     setSearchTerm(value);
     setNoResults(false);
-    setEmptySearch(value === '');
+    setEmptySearch(value === "");
   };
 
   const handleSearch = async (event) => {
     event.preventDefault();
-    if (searchTerm.trim() === '') {
+    if (searchTerm.trim() === "") {
       setEmptySearch(true);
       return;
     }
@@ -50,7 +50,8 @@ function SearchMedicine({ setFilteredMedicine }) {
           value={searchTerm}
           className="form-control mr-2"
           onChange={handleSearchInputChange}
-        />&nbsp;&nbsp;&nbsp;
+        />
+        &nbsp;&nbsp;&nbsp;
         <button type="submit" className="btn btn-success">
           Search
         </button>
